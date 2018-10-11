@@ -28,7 +28,7 @@ To run all the services:
     docker-compose up
 
 The file docker-compose.build.yaml builds and run docker images for each service. 
-First, clone all services repositories to the working directory, then go to the devenv dir and run:
+First, clone all necessary P1 services repositories to the working directory, then go to the devenv dir and run:
     
     copy docker-compose.build.yaml docker-compose.yaml
     docker-compose up
