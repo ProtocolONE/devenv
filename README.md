@@ -33,4 +33,4 @@ First, clone all services repositories to the working directory, then go to the 
     copy docker-compose.build.yaml docker-compose.yaml
     docker-compose up
 
-After services are available by URLs like http://admin.protocol.local:8080 
+After initialization of containers services are available by URLs like http://admin.protocol.local:8080 
