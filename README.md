@@ -6,9 +6,17 @@ This is the repository for the docker-compose files and configs to setup develop
 Prerequisites
 -------------
 
-insert the following line to the hosts file: 
+Insert the following line to the hosts file: 
 
     127.0.0.1 admin.protocol.local api.protocol.local auth.protocol.local
+
+Create persistent volumes and network:
+  
+    docker volume create p1-admin-mongo
+    docker volume create p1-auth-mongo
+    docker network create p1devnet
+
+Copy file ./etc/.env.example to ./etc/.env and set appropriate values for the environment variables.
 
 Usage
 -----
@@ -24,3 +32,5 @@ First, clone all services repositories to the working directory, then go to the 
     
     copy docker-compose.build.yaml docker-compose.yaml
     docker-compose up
+
+After services are available by URLs like http://admin.protocol.local:8080 
