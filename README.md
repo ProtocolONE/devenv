@@ -23,16 +23,24 @@ Usage
 
 The file docker-compose.latest.yaml uses pre-built docker images. 
 To run all the services:
+
 windows:    
+
     start-latest.cmd
+
 Linux:
+
     ./start-latest.sh
 
 The file docker-compose.build.yaml builds and run docker images for each service. 
 First, clone all necessary P1 services repositories to the working directory, then go to the devenv dir and run:
-windows:    
+
+Windows:    
+
     start-build.cmd
+
 Linux:
+
     ./start-latest.sh
 
 To start containers in detached mode add "-d" argument to the start script command line.
