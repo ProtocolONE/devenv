@@ -24,7 +24,7 @@ Usage
 The file docker-compose.latest.yaml uses pre-built docker images. 
 To run all the services:
 
-windows:    
+Windows:    
 
     start-latest.cmd
 
