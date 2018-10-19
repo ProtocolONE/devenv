@@ -35,4 +35,6 @@ windows:
 Linux:
     ./start-latest.sh
 
+To start containers in detached mode add "-d" argument to the start script command line.
+
 After initialization of containers services are available by URLs like http://admin.protocol.local:8080
