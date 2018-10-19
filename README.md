@@ -23,14 +23,16 @@ Usage
 
 The file docker-compose.latest.yaml uses pre-built docker images. 
 To run all the services:
-    
-    copy docker-compose.latest.yaml docker-compose.yaml
-    docker-compose up
+windows:    
+    start-latest.cmd
+Linux:
+    ./start-latest.sh
 
 The file docker-compose.build.yaml builds and run docker images for each service. 
 First, clone all necessary P1 services repositories to the working directory, then go to the devenv dir and run:
-    
-    copy docker-compose.build.yaml docker-compose.yaml
-    docker-compose up
+windows:    
+    start-build.cmd
+Linux:
+    ./start-latest.sh
 
-After initialization of containers services are available by URLs like http://admin.protocol.local:8080 
+After initialization of containers services are available by URLs like http://admin.protocol.local:8080
