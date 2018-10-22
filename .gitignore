@@ -1,2 +1,6 @@
 /etc/.env
 docker-compose.yaml
+updaterfiles/**
+!updaterfiles/test
+updaterfiles/test/**
+!updaterfiles/test/dummy.txt

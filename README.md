@@ -8,7 +8,7 @@ Prerequisites
 
 Insert the following line to the hosts file: 
 
-    127.0.0.1 admin.protocol.local api.protocol.local auth.protocol.local
+    127.0.0.1 admin.protocol.local api.protocol.local auth.protocol.local fs.protocol.local
 
 Create persistent volumes and network:
   
@@ -44,5 +44,7 @@ Linux:
     ./start-latest.sh
 
 To start containers in detached mode add "-d" argument to the start script command line.
+
+If you need to test launcher updater system, put the files to distribute to the ./updaterfiles directory.
 
 After initialization of containers services are available by URLs like http://admin.protocol.local:8080
