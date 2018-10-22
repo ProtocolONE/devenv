@@ -6,6 +6,13 @@ This is the repository for the docker-compose files and configs to setup develop
 Prerequisites
 -------------
 
+The services use the following domain names:
+  
+  - admin.protocol.one: P1 admin service
+  - api.protocol.one: P1 api service
+  - auth.protocol.one: P1 auth service  
+  - fs.protocol.one: test launcher updater service  
+
 Insert the following line to the hosts file: 
 
     127.0.0.1 admin.protocol.local api.protocol.local auth.protocol.local fs.protocol.local
@@ -45,10 +52,13 @@ Linux:
 
 To start containers in detached mode add "-d" argument to the start script command line.
 
-If you need to test launcher updater system, put the files to distribute to the ./updaterfiles directory.
+Updater
+-------
+
+If you need to test launcher updater system, put the files to be distributed to the ./updaterfiles directory.
 If you need to test launcher updater system only, without other services, you can just run:
 
-    docker-compose -f docker-compose.latest.updater.yaml up
+    docker-compose -f docker-compose.updater.yaml up
 
 or use start scripts:
 
@@ -59,5 +69,8 @@ Windows:
 Linux:
     
     ./start-updater.sh
+
+Web access
+----------
 
 After initialization of containers services are available by URLs like http://admin.protocol.local:8080
