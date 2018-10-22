@@ -46,5 +46,18 @@ Linux:
 To start containers in detached mode add "-d" argument to the start script command line.
 
 If you need to test launcher updater system, put the files to distribute to the ./updaterfiles directory.
+If you need to test launcher updater system only, without other services, you can just run:
+
+    docker-compose -f docker-compose.latest.updater.yaml up
+
+or use start scripts:
+
+Windows:
+    
+    start-updater.cmd
+
+Linux:
+    
+    ./start-updater.sh
 
 After initialization of containers services are available by URLs like http://admin.protocol.local:8080
