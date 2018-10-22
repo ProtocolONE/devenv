@@ -13,6 +13,8 @@ The services use the following domain names:
   - auth.protocol.one: P1 auth service  
   - fs.protocol.one: test launcher updater service  
 
+After initialization of containers services are available by URLs like http://admin.protocol.local:8080
+
 Insert the following line to the hosts file: 
 
     127.0.0.1 admin.protocol.local api.protocol.local auth.protocol.local fs.protocol.local
@@ -69,8 +71,3 @@ Windows:
 Linux:
     
     ./start-updater.sh
-
-Web access
-----------
-
-After initialization of containers services are available by URLs like http://admin.protocol.local:8080
