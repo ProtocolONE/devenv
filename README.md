@@ -38,7 +38,7 @@ After initialization of containers services are available by URLs like http://ad
 Usage
 -----
 
-The file docker-compose.latest.yaml uses pre-built docker images. These images are built automatically and pushed to the Docker Hub by CI/CD pipline. In the current implementation builds are triggered by each commit to the master branches of the services repositories.
+The file *docker-compose.latest.yaml* uses pre-built docker images. These images are built automatically and pushed to the Docker Hub by CI/CD pipline. In the current implementation builds are triggered by each commit to the master branches of the services repositories.
 To run all the services:
 
 Windows:    
@@ -49,7 +49,7 @@ Linux:
 
     ./start-latest.sh
 
-The file docker-compose.build.yaml builds and run docker images for each service with the services source files, which lets you to alter code and test results localy. 
+The file *docker-compose.build.yaml* builds and run docker images for each service with the services source files, which lets you to alter code and test results localy. 
 If your OS is Windows, you need to share the drive to which you clone P1 repositories in the Docker settings.
 First, clone all necessary P1 services repositories to the working directory (to the same parent dir as for devenv), then go to the devenv dir and run:
 
