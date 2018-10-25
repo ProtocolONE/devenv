@@ -6,14 +6,19 @@ This is the repository for the docker-compose files and configs to setup develop
 Prerequisites
 -------------
 
-The services use the following domain names:
+P1 services are built with Docker, so you need to have installed and running Docker host. 
+If you don't have Docker yet, you can follow these official manuals:
+
+ - Windows: https://docs.docker.com/docker-for-windows/install/
+ - Mac: https://docs.docker.com/docker-for-mac/install/
+ - Ubuntu: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+The P1 services use the following domain names in the development or local test environment:
   
   - admin.protocol.one: P1 admin service
   - api.protocol.one: P1 api service
   - auth.protocol.one: P1 auth service  
   - fs.protocol.one: test launcher updater service  
-
-After initialization of containers services are available by URLs like http://admin.protocol.local:8080
 
 Insert the following line to the hosts file: 
 
@@ -26,6 +31,8 @@ Create persistent volumes and network:
     docker network create p1devnet
 
 Copy file ./etc/.env.example to ./etc/.env and set appropriate values for the environment variables.
+
+After initialization of containers services are available by URLs like http://admin.protocol.local:8080
 
 Usage
 -----
