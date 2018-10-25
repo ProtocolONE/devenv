@@ -38,7 +38,7 @@ After initialization of containers services are available by URLs like http://ad
 Usage
 -----
 
-The file docker-compose.latest.yaml uses pre-built docker images. 
+The file docker-compose.latest.yaml uses pre-built docker images. These images are built automatically and pushed to the Docker Hub by CI/CD pipline. In the current implementation builds are triggered by each commit to the master branches of the services repositories.
 To run all the services:
 
 Windows:    
