@@ -49,7 +49,7 @@ Linux:
 
     ./start-latest.sh
 
-The file docker-compose.build.yaml builds and run docker images for each service. 
+The file docker-compose.build.yaml builds and run docker images for each service with the services source files, which lets you to alter code and test results localy. 
 If your OS is Windows, you need to share the drive to which you clone P1 repositories in the Docker settings.
 First, clone all necessary P1 services repositories to the working directory (to the same parent dir as for devenv), then go to the devenv dir and run:
 
