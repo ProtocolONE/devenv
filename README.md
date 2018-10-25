@@ -31,6 +31,7 @@ Create persistent volumes and network:
     docker network create p1devnet
 
 Copy file ./etc/.env.example to ./etc/.env and set appropriate values for the environment variables.
+P1 Admin service uses Amazon S3 service, so you'll need to set S3 access parameters in the ./etc/.env file.
 
 After initialization of containers services are available by URLs like http://admin.protocol.local:8080
 
