@@ -20,7 +20,7 @@ The P1 services use the following domain names in the development or local test 
   - auth.protocol.one: P1 auth service  
   - fs.protocol.one: test launcher updater service  
 
-Insert the following line to the hosts file: 
+Insert the following line to the hosts file (usually c:\windows\system32\drivers\etc\hosts for Windows or /etc/hosts for Linux): 
 
     127.0.0.1 admin.protocol.local api.protocol.local auth.protocol.local fs.protocol.local
 
