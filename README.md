@@ -13,6 +13,8 @@ If you don't have Docker yet, you can follow these official manuals:
  - Mac: https://docs.docker.com/docker-for-mac/install/
  - Ubuntu: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
+Also you'll need a docker ID and password to be able to pull images from the Docker Hub, so if you don't have them, you'll need to register at https://hub.docker.com.
+
 The P1 services use the following domain names in the development or local test environment:
   
   - admin.protocol.one: P1 admin service
