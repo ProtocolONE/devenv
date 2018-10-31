@@ -26,7 +26,7 @@ Insert the following line to the hosts file (usually c:\windows\system32\drivers
 
     127.0.0.1 admin.protocol.local api.protocol.local auth.protocol.local fs.protocol.local
 
-Create persistent volumes and network:
+Create persistent volumes and network (under Linux the following commands need to be executed with sudo if you are not logged in as root):
   
     docker volume create p1-admin-mongo
     docker volume create p1-auth-mongo
