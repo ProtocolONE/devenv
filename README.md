@@ -6,6 +6,10 @@ This is the repository for the docker-compose files and configs to setup develop
 Prerequisites
 -------------
 
+Clone or download and unpack this repository to your local directory:
+  
+    git clone https://github.com/ProtocolONE/devenv.git && cd devenv
+
 P1 services are built with Docker, so you need to have installed and running Docker host. 
 If you don't have Docker yet, you can follow these official manuals:
 
