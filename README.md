@@ -49,7 +49,7 @@ Windows:
 
 Linux:
 
-    ./start-latest.sh
+    sudo ./start-latest.sh
 
 The file **docker-compose.build.yaml** builds and run docker images for each service with the services source files, which lets you to alter code and test results localy. 
 If your OS is Windows, you need to share the drive to which you clone P1 repositories in the Docker settings.
@@ -61,7 +61,7 @@ Windows:
 
 Linux:
 
-    ./start-build.sh
+    sudo ./start-build.sh
 
 To start containers in detached mode add **-d** argument to the start script command line.
 
@@ -81,4 +81,4 @@ Windows:
 
 Linux:
     
-    ./start-updater.sh
+    sudo ./start-updater.sh
