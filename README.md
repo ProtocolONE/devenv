@@ -1,7 +1,7 @@
 Protocol One development environment
 ====================================
 
-This is the repository for the docker-compose files and configs to setup development environment for different cases.
+This is the repository for the docker-compose files and configs to setup development and test environment for different cases.
 
 Prerequisites
 -------------
@@ -33,6 +33,8 @@ Insert the following line to the hosts file (usually c:\windows\system32\drivers
 
     127.0.0.1 admin.protocol.local api.protocol.local auth.protocol.local fs.protocol.local
 
+If you want to run the services on a remote machine, set its IP in this line instead of **127.0.0.1**.
+
 Create persistent volumes and network (under Linux the following commands need to be executed with sudo if you are not logged in as root):
   
     docker volume create p1-admin-mongo
@@ -42,7 +44,8 @@ Create persistent volumes and network (under Linux the following commands need t
 Copy file ./etc/.env.example to ./etc/.env and set appropriate values for the environment variables.
 P1 Admin service uses Amazon S3 service, so you'll need to set S3 access parameters in the ./etc/.env file.
 
-After initialization of containers services are available by URLs like http://admin.protocol.local:8080
+After initialization of containers (read the **Usage** section) services are available by URLs like http://admin.protocol.local:8080. 
+If you run the services on a remote machine, you need to set firewall(s) to allow connections from your machine to the tcp port 8080 on a remote machine.
 
 Usage
 -----
