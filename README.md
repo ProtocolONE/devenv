@@ -89,6 +89,8 @@ Windows:
     
     start-updater.cmd
 
+For uploads this updater environment by default uses FTP server with user **ftpuser** and password **ftppass**, which are configured in the environment section of the **docker-compose.updater.yaml** file.
+
 Linux:
     
     sudo ./start-updater.sh

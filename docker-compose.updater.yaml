@@ -11,6 +11,23 @@ services:
         ports:
             - "8080:80"
         restart: always
+    p1-ftp-updater:
+        container_name: p1-ftp-updater
+        image: stilliard/pure-ftpd:hardened
+        privileged: true
+        ports:
+          - "21:21"
+          - "30000-30009:30000-30009"
+        networks: 
+          - p1devnet
+        volumes:
+            - "./updaterfiles:/home/ftpuser"
+            #- "./etc/pure-ftpd:/etc/pure-ftpd"
+        environment:
+            - PUBLICHOST=127.0.0.1
+            - FTP_USER_NAME=ftpuser
+            - FTP_USER_PASS=ftppass
+            - FTP_USER_HOME=/home/ftpuser
 
 networks:
   p1devnet:
