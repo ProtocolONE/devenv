@@ -11,7 +11,7 @@ services:
           - p1devnet
         ports:
             - "8080:80"
-        restart: always
+        restart: unless-stopped
 
     p1-ftp-updater:
         container_name: p1-ftp-updater
@@ -40,7 +40,7 @@ services:
           - ./etc/.env
         networks: 
           - p1devnet
-        restart: always
+        restart: unless-stopped
 
     p1-api-php:
         build:
@@ -51,7 +51,7 @@ services:
           - ./etc/.env
         networks: 
           - p1devnet
-        restart: always
+        restart: unless-stopped
 
     p1-auth-php:
         build:
@@ -60,7 +60,7 @@ services:
         container_name: p1-auth-php-build
         networks: 
           - p1devnet
-        restart: always
+        restart: unless-stopped
 
     p1-admin-mongo:        
         image: mongo:4.1.3
@@ -69,7 +69,7 @@ services:
           p1devnet:
             aliases: 
               - p1-api-mongo
-        restart: always
+        restart: unless-stopped
         volumes:
             - p1-admin-mongo:/data/db
         ports:
@@ -78,7 +78,7 @@ services:
     p1-auth-mongo:
         image: mongo:4.1.3
         container_name: p1-auth-mongo-build
-        restart: always
+        restart: unless-stopped
         networks: 
           - p1devnet
         volumes:

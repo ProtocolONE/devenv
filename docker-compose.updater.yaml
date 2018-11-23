@@ -10,11 +10,12 @@ services:
           - p1devnet
         ports:
             - "8080:80"
-        restart: always
+        restart: unless-stopped
     p1-ftp-updater:
         container_name: p1-ftp-updater
         image: stilliard/pure-ftpd:hardened
         privileged: true
+        restart: unless-stopped
         ports:
           - "21:21"
           - "30000-30009:30000-30009"
